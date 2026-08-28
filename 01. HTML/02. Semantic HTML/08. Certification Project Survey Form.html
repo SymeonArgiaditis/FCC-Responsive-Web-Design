@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Cybersecurity Awareness Survey</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve our security training program
+      </p>
+    </header>
+
+    <main>
+      <form id="survey-form">
+        <div>
+          <label for="name" id="name-label">Name</label>
+          <input 
+            id="name" 
+            type="text"
+            placeholder="e.g., John Doe"
+            size="20"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="email" id="email-label">Email</label>
+          <input
+            id="email" 
+            type="email"
+            placeholder="example@email.com"
+            size="20"
+            required
+          />
+        </div>
+
+        <div>
+        <label for="number" id="number-label">Years of Experience in IT/Security(optional)</label>
+          <input 
+            id="number"
+            type="number"
+            placeholder="0-100"
+            min="0"
+            max="100"
+            size="4"
+          />
+        </div>
+
+        <div>
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown">
+            <option disabled selected>Select current role</option>
+            <option>Student</option>
+            <option>Full Time Job</option>
+            <option>Part Time Job</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <p>How confident do you feel identifying phishing attempts?</p>
+          <input 
+            id="confident-option"
+            type="radio"
+            name="confidence-in-skills"
+            value="confident"
+          />
+          <label for="confident-option">Very Confident</label>
+
+          <input 
+            id="somewhat-confident-option"
+            type="radio"
+            name="confidence-in-skills"
+            value="somewhat-confident"
+          />
+          <label for="somewhat-confident-option">Somewhat Confident</label>
+
+          <input
+            id="not-sure-option"
+            type="radio"
+            name="confidence-in-skills"
+            value="not-sure"
+          />
+          <label for="not-sure-option">Not Sure</label>
+        </div>
+
+        <div>
+          <p>What is your favorite security topic to learn about?</p>
+          <select id="dropdown">
+            <option disabled selected>Select an option</option>
+            <option>Network Security</option>
+            <option>Cloud Security</option>
+            <option>Ethical Hacking & Penetration Testing</option>
+            <option>Incident Response & Digital Forensics</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <p>What would you like to see improved? (Check all that apply)</p>
+
+          <input type="checkbox" id="network-security" value="network-security">
+          <label for="network-security">Network Security</label>
+
+          <input type="checkbox" id="ethical-hacking" value="ethical-hacking">
+          <label for="ethical-hacking">Ethical Hacking</label>
+
+          <input type="checkbox" id="cloud-security" value="cloud-security">
+          <label for="cloud-security">Cloud Security</label>
+
+          <input type="checkbox" id="network-security" value="network-security">
+          <label for="network-security">Network Security</label>
+
+          <input type="checkbox" id="capture-the-flag" value="capture-the-flag">
+          <label for="capture-the-flag">Capture The Flag</label>
+
+          <input type="checkbox" id="incident-response" value="incident-response">
+          <label for="incident-response">Incident Response</label>
+
+          <input type="checkbox" id="malware-analysis" value="malware-analysis">
+          <label for="malware-analysis">Malware Analysis</label>
+
+          <input type="checkbox" id="live-workshops" value="live-workshops">
+          <label for="live-workshops">Live Workshops</label>
+
+          <input type="checkbox" id="video-tutorials" value="video-tutorials">
+          <label for="video-tutorials">Video Tutorials</label>
+
+          <input type="checkbox" id="certification-prep" value="certification-prep">
+          <label for="certification-prep">Certification Prep</label>
+
+          <input type="checkbox" id="community-forums" value="community-forums">
+          <label for="community-forums">Community Forums</label>
+
+          <input type="checkbox" id="additional-resources" value="additional-resources">
+          <label for="additional-resources">Additional Resources</label>
+        </div>
+        
+        <div>
+          <br><label for="comments">Any comments or suggestions?</label><br>
+          <textarea cols="50" rows="10" name="comments" id="comments"></textarea>
+        </div>
+
+        <button type="submit" id="submit">Submit</button>
+
+      </form>
+    </main>
+
+  </body>
+</html>
