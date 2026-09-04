@@ -1,0 +1,152 @@
+/* Base Page Setup */
+
+body {
+  background-color: #0F172A;
+  color: #F8FAFC;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #F8FAFC;
+}
+
+.container {
+  background-color: #1E293B;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Fieldsets & Legends */
+
+fieldset {
+  border: 1px solid #475569;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+legend {
+  font-size: 1.3rem;
+  padding: 0 8px;
+}
+
+/* Base Form Inputs */
+
+label { 
+  font-size: 1.3rem;
+}
+
+label:not(.radio-option) {
+  display: block;  
+  margin: 10px 0;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #0F172A;
+  color: #F8FAFC;
+  border: 1px solid #475569;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94A3B8;
+}
+
+/* Select Dropdown Styling */
+
+select option {
+  background-color: #1E293B;
+  color: #F8FAFC;
+}
+
+/* Focus state */
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #059669;
+}
+
+/* Validation */
+
+input:not([type="radio"]):not([type="checkbox"]):user-invalid,
+select:user-invalid,
+textarea:user-invalid {  
+  border: 2px solid #EF4444;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):user-valid,
+select:user-valid,
+textarea:user-valid {
+  border: 2px solid #10B981;
+}
+
+/* Radio Buttons */
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.radio-option input[type="radio"] {
+  margin: 0;
+}
+
+.radio-group input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #64748B;
+  background-color: #0F172A;
+  cursor: pointer;
+  margin: 0;
+  vertical-align: bottom;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: #059669;
+  background-color: #059669;
+  box-shadow: inset 0 0 0 4px #1E293B;
+}
+
+/* Buttons */
+
+button {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #059669;
+  color: #F8FAFC;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #10B981;
+}
