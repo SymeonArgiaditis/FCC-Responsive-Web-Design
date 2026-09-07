@@ -1,0 +1,88 @@
+/* Base Page Setup */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #c6d2c6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px 0;
+}
+
+/* Containers & Cards */
+
+.feature-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  max-width: 600px;
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #588157;
+  border-radius: 12px;
+  padding: 10px 20px 20px 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 45%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #5B9F68;
+}
+
+/* Inputs & Labels */
+
+.card-title {
+  color: #354E41;
+  font-weight: 600;
+}
+
+.feature-card p {
+  margin: 4px 0 0 0;
+  font-size: 0.95rem;
+}
+
+input[type="checkbox"] {
+  align-self: flex-end;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid #588157;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5B9F68;
+  border-color: #588157;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  line-height: 24px;
+}
