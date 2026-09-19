@@ -1,0 +1,74 @@
+/* Root */
+html {
+  font-size: 24px;
+}
+
+body {
+  background: beige;
+}
+
+/* Base Page Formatting */
+.newspaper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Open Sans", "sans-serif";
+  background: whitesmoke;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 10px 20px;
+}
+
+/* Headings */
+
+.name {
+  font-size: 2rem;
+  font-family: "Times New Roman", "serif";
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(60, 97, 98);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.name,
+.author {
+  text-transform: uppercase;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.date {
+  text-align: center;
+}
+
+.headline {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.sub-headline {
+  font-weight: 100;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+/* Paragraphs */
+
+.text {
+  text-indent: 20px;
+  line-height: 2em;
+}
+
+.text::first-letter {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/* Additional Styling */
+
+.italic-text {
+  font-style: italic;
+}
