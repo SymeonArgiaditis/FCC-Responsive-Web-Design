@@ -1,0 +1,100 @@
+/* Base Page Setup */
+body {
+  background: #f5f6f7;
+  color: #1b1b32;
+  font-family: Cambria;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Title & Subtitle */
+#title {
+  font-size: 3em;
+  color: midnightblue;
+  margin-bottom: 0;
+}
+
+#subtitle {
+  margin: 5px 0 20px; 
+}
+
+/* Main Page Content */
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 236, 207);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 18px;
+}
+
+#img-div {
+  box-sizing: border-box;
+  background: rgba(245, 245, 245, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0;
+}
+
+#image {
+  display: block;
+  width: 80%;
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 0 auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#img-caption {
+  font-style: italic;
+  font-size: 0.950em;
+  text-align: left;
+  padding: 5px;
+}
+
+#tribute-info {
+  text-align: left;
+}
+
+ul > li {
+  padding: 10px 0;
+}
+
+/* Footer */
+blockquote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  color: rgb(100, 100, 100);
+}
+
+#more-info > p {
+  font-size: 1.5rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: midnightblue;
+  font-weight: bold;
+}
+
+a:hover {
+  color: blue;
+}
+
+/* Text Decorations */
+
+.bold-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: midnightblue;
+}
+
+.bold-text::after {
+  content: " |"
+}
