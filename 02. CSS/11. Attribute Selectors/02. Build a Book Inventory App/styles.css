@@ -1,0 +1,106 @@
+/* Base Page Setup */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #829ba3;
+}
+
+/* Title */
+h1 {
+  margin: 10px auto 20px;
+}
+
+/* Table Setup */
+table {
+  border-collapse: collapse;
+  width: 100vh;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+  background-image: linear-gradient(hsl(197, 92%, 77%, 0.60), hsl(197, 92%, 50%, 0.60));
+}
+
+th {
+  padding: 0.4rem;
+}
+
+td {
+  text-align: center;
+  padding: 0.3rem;
+}
+
+span[class="status"],
+span[class^="rate"] {
+  height: 1.85em;
+  width: 7em;
+  padding: 0.3em;
+}
+
+span[class="status"] {
+  border-radius: 20%/60%;
+}
+
+/* Table Rows */
+span {
+  display: inline-block;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(hsl(120, 100%, 85%, 0.6), hsl(120, 100%, 65%, 0.6));
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(hsl(120, 20%, 95%, 0.6), hsl(120, 20%, 75%, 0.6));
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(hsl(40, 100%, 85%, 0.60), hsl(40, 100%, 65%, 0.6));
+}
+
+/* Status Column Color */
+tr[class="read"] span[class="status"] {
+  border: 0.1em solid hsl(120, 75%, 45%);
+  background-image: linear-gradient(hsl(120, 75%, 75%), hsl(120, 75%, 50%));
+}
+
+tr[class="to-read"] span[class="status"]{
+  border: 0.1em solid hsl(5, 100%, 45%);
+  background-image: linear-gradient(hsl(5, 100%, 75%), hsl(5, 100%, 50%));
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 0.1em solid hsl(40, 90%, 40%);
+  background-image: linear-gradient(hsl(40, 90%, 75%), hsl(40, 90%, 50%));
+}
+
+/* Rate Column */
+span[class^="rate"] > span {
+  border: 0.1em solid hsl(0, 0%, 50%);
+  border-radius: 50%;
+  background-color: hsl(0, 15%, 95%);
+  height: 100%;
+  width: 20%;
+  margin: 0.1em;
+}
+
+/* Rate Discs */
+span[class~="three"] span {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
+span[class~="two"] :nth-child(1),
+span[class~="two"] :nth-child(2) {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
+span[class~="one"] :first-child {
+    background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
