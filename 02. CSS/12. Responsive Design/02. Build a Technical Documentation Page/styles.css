@@ -1,0 +1,195 @@
+/* ##### FONTS ##### */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
+  
+:root {
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: 'Fira Code', 'JetBrains Mono', Consolas, Monaco, monospace;
+}
+
+/* ##### SMOOTH SCROLLING ##### */
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ##### BASE PAGE ##### */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: var(--font-body);
+  color: #e6e8ef;
+  background-color: #121218;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ##### LAYOUT ##### */
+
+/* Desktop Layout (Default) */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 290px;
+  height: 100vh;
+  background-color: #1e1e2a;
+  border-right: 1px solid #2e2e40;
+  overflow-y: auto;
+}
+
+#main-doc {
+  margin-left: 290px;
+  padding: 40px 60px;
+  min-width: 0;
+}
+
+/* Mobile & Small Screen Layout */
+@media (max-width: 768px) {
+  #navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #2e2e40;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 24px 20px;
+  }
+}
+/* ##### NAVBAR STYLING & PADDING ##### */
+
+#navbar > header {
+  color: #e6e8ef;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 24px 20px 16px 20px;
+  border-bottom: 1px solid #2e2e40;
+}
+
+#navbar > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  border-bottom: 1px solid rgba(46, 46, 64, 0.4);
+}
+
+/* Default Links */
+#navbar .nav-link {
+  display: block;
+  text-decoration: none;
+  color: #9499b0;
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-left: 3px solid transparent;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+#navbar .nav-link:hover {
+  color: #e6e8ef;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid #e6e8ef;
+}
+
+/* Active Link State */
+#navbar .nav-link:active,
+#navbar .nav-link:focus {
+  color: #00f0ff;
+  border-left: 3px solid #00f0ff;
+  background-color: rgba(0, 240, 255, 0.08);
+  outline: none;
+}
+
+/* ##### MAIN DOCUMENTATION HEADERS & TEXT ##### */
+
+.main-section {
+  margin-bottom: 48px;
+}
+
+.main-section header {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #e6e8ef;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2e2e40;
+}
+
+.main-section p {
+  color: #d1d5db;
+  font-size: 1.025rem;
+  margin: 0 0 16px 0;
+}
+
+.main-section ul {
+  padding-left: 24px;
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+.main-section li {
+  margin-bottom: 8px;
+}
+
+.bold {
+  font-weight: 600;
+  color: #e6e8ef;
+}
+
+/* ##### INLINE & BLOCK CODE STYLING ##### */
+
+/* Inline code tags */
+code {
+  font-family: var(--font-code);
+  font-size: 0.9em;
+  background-color: #1e1e2a;
+  color: #00f0ff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid #2e2e40;
+}
+
+pre {
+  background-color: #1e1e2a;
+  border: 1px solid #2e2e40;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  color: #e6e8ef;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+pre p {
+  color: #9499b0;
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, Monaco, monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #2e2e40;
+}
