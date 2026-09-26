@@ -1,0 +1,382 @@
+/* ##### FONTS ##### */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* ##### VARIABLES ##### */
+
+:root {
+  --font-heading: 'Fraunces', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-body: 'Nunito Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  --primary-color: #ffd23f;
+  --primary-dark: #e8b923;
+  --heading-color: #3d2b1f;
+  --body-color: #4a4038;
+  --accent-color: #7a9b57;
+  --accent-dark: #6b4226;
+  --bg-color: #fff8e7;
+  --bg-dark: #f5efd9;
+}
+
+/* ##### SMOOTH SCROLLING ##### */
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ##### BASE PAGE SETUP ##### */
+
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--body-color);
+  background-color: var(--bg-color);
+}
+
+/* ##### HEADINGS ##### */
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--heading-color);
+}
+
+/* ##### HEADER ##### */
+
+#header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  min-height: 75px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-dark);
+}
+
+#logo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 12px;
+}
+
+#header-img {
+  width: 70px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+#header-img:hover {
+  transform: scale(1.1);
+}
+
+/* ##### NAVBAR ##### */
+
+#nav-bar {
+  align-self: stretch;
+}
+
+#nav-bar > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  height: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--heading-color);
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 1.5rem;
+  height: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: var(--primary-dark);
+}
+.nav-link:focus,
+.nav-link:active {
+  background-color: var(--accent-color);
+}
+
+/* ##### HERO ##### */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem auto;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto 2rem;
+  width: 100%;
+}
+
+#email {
+  max-width: 300px;
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  border: 2px solid var(--accent-dark);
+  border-radius: 2px;
+}
+
+#submit {
+  font-size: 1rem;
+  font-weight: 700;
+  max-width: 225px;
+  width: 100%;
+  border-radius: 2px;
+  border: 2px solid var(--accent-dark);
+  background-color: var(--primary-color);
+  color: var(--heading-color);
+  margin: 2rem auto;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+#submit:hover {
+  background-color: var(--primary-dark);
+}
+
+#submit:focus,
+#submit:active {
+  background-color: var(--accent-color);
+  transform: scale(0.97);
+}
+
+/* ##### MAIN ##### */
+
+#features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#features div {
+  background-color: var(--bg-dark);
+  border-radius: 2px;
+  width: 80vw;
+  margin: 1rem;
+  padding: 10px;
+}
+
+#features h2 {
+  margin: 0 auto 16px;
+}
+
+#features h3:before {
+  content: "✓ ";
+}
+
+#how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+#how-it-works h2 {
+  margin: 1rem auto 16px;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+#pricing h2 {
+  margin: 1rem auto 16px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  background-color: var(--bg-dark);
+  border-color: var(--accent-dark);
+  border-radius: 2px;
+}
+
+.product > h3 {
+  color: var(--bg-color);
+  text-shadow: 0 0 2px var(--accent-dark);
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  width: 100%;
+  padding: 15px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > p {
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px auto 0;
+}
+
+.product > ol {
+  list-style-type: none;
+  text-align: left;
+  padding: 15px;
+  width: 100%;
+}
+
+.product .btn {
+  font-size: 1rem;
+  font-weight: 700;
+  width: 50%;
+  border-radius: 2px;
+  border: 2px solid var(--accent-dark);
+  background-color: var(--primary-color);
+  color: var(--heading-color);
+  margin: auto auto 10px;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.product .btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.product .btn:active {
+  background-color: var(--accent-color);
+  transform: scale(0.97);
+}
+
+/* ##### FOOTER ##### */
+
+footer {
+  margin-top: 30px;
+  background-color: var(--bg-dark);
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+footer > ul li {
+  margin: 0 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: var(--accent-dark);
+}
+
+footer a:active {
+  color: var(--accent-color);
+}
+
+footer > span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* ##### MOBILE ##### */
+
+@media screen and (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    padding: 10px 0;
+    min-height: unset;
+  }
+
+  #logo {
+    margin-bottom: 10px;
+  }
+
+  #header-img {
+    width: 50px;
+  }
+
+  #nav-bar > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 10px 1rem;
+  }
+
+  #hero h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  #features div {
+    width: 90vw;
+  }
+
+  #video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90vw;
+    margin: 10px 0;
+  }
+
+  footer > ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer > span {
+    justify-content: center;
+    text-align: center;
+  }
+}
