@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+
+  <body>
+    <header id="header">
+      <nav id="navbar">
+        <ul id="nav-list">
+          <li><a class="nav-link" href="#welcome-section">About</a></li>
+          <li><a class="nav-link" href="#project-section">Work</a></li>
+          <li><a class="nav-link" href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome-section">
+        <div class="welcome-content">
+          <h1>Hey! I'm Symeon</h1>
+          <p>an enginner with a <span class="italic">mathematical</span> edge</p>
+        </div>
+      </section>
+
+      <section id="project-section">
+        <h2>My Work</h2>
+        
+        <div class="projects-grid">
+          <a 
+            class="project-tile" 
+            href="https://github.com/SymeonArgiaditis/FCC-Python/blob/main/08.%20Algorithms/QuicksortInPlace.py" 
+            target="_blank"
+            aria-label="Quick Sort in Place Python Algorithm project">
+            
+            <div class="project-preview">
+              <img 
+              class="project-image" 
+              src="assets/QuickSort.png" 
+              alt="Quick Sort in Place algorithm in Python." 
+              loading="lazy">
+            </div>
+
+            <div class="project-info">
+              <h3 class="project-title">Quick Sort in Place</h3>
+              <p class="project-description">
+                An optimized space-efficient recursive in-place sorting algorithm.
+              </p>
+            </div>
+          </a>
+
+          <a 
+            class="project-tile" 
+            href="https://github.com/SymeonArgiaditis/FCC-Python/blob/main/09.%20Graphs%20and%20Trees/ShortestPathAlgorithm.py" 
+            target="_blank"
+            aria-label="Shortest Path Dijkstra Algorithm project">
+            
+            <div class="project-preview">
+              <img 
+              class="project-image" 
+              src="assets/ShortestPath.png" 
+              alt="Dijkstra's algorithm in Python." 
+              loading="lazy">
+            </div>
+
+            <div class="project-info">
+              <h3 class="project-title">Shortest Path Algorithm</h3>
+              <p class="project-description">
+                Implementation of Dijkstra's graph search algorithm 
+                calculating optimal paths in weighted networks.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <a class="btn-show-all" href="https://github.com/SymeonArgiaditis" target="_blank">
+          Show All
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      </section>
+
+      <section id="contact-section">
+        <div class="contact-section-header">
+          <h2>Let's talk shop.</h2>
+          <p>Open to conversations about CS, security, or a chat. Reach me here:</p>
+        </div>
+
+        <div class="contact-links">
+          <a 
+            id="profile-link"
+            class="contact-btn" 
+            href="https://github.com/SymeonArgiaditis" 
+            target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+
+          <a
+            class="contact-btn"
+            href="https://www.linkedin.com/in/symeon-argiaditis-62658b352/"
+            target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Symeon. Computers are fun.</p>
+      <a href="#welcome-section">Back to top <i class="fas fa-arrow-up"></i></a>
+    </footer>
+  </body>
+</html>
