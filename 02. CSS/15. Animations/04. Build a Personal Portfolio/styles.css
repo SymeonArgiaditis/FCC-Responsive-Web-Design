@@ -112,7 +112,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-#welcome-content {
+.welcome-content {
   animation: fadeInUp 1s ease-out;
 }
 
